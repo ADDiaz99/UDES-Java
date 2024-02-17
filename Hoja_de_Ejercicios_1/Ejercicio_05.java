@@ -1,4 +1,4 @@
-package Practice;
+package Hoja_de_Ejercicios_1;
 import java.util.Scanner;
 /**
  *
@@ -7,7 +7,7 @@ import java.util.Scanner;
  * que dado un número el imprima las clases de Unidades respectivas.
  * 
  */
-public class Ejercicio_01 {
+public class Ejercicio_05 {
     
     public static void main(String[] args){
         Scanner bring = new Scanner(System.in);
