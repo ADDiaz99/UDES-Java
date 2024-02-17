@@ -40,6 +40,8 @@ public class Java_testing {
                 break;
             default:
                 System.out.println("Not a valid input");
-        }    
+        }
+        
+        myObj.close();
     }
 }

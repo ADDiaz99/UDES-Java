@@ -42,5 +42,7 @@ public class Ejercicio_05 {
         System.out.println("Centenares: " + centenares);
         System.out.println("Decenas: " + decenas);
         System.out.println("Unidades: " + unidades);
+
+        bring.close();  // gotta close the Scanner, else resources might leak
     }
 }

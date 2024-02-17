@@ -22,5 +22,7 @@ public class Fibonacci {
             start = second;
             second = third;
         }
+
+        bring.close();
     }
 }

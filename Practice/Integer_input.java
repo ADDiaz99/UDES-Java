@@ -26,5 +26,7 @@ public class Integer_input {
         else{
             System.out.println("You entered Zero.");
         }
+
+        bring.close();
     }
 }
