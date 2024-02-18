@@ -8,5 +8,6 @@ import java.util.Scanner;
 public class Ejercicio_01 {
     public static void main(String[] args){
         Scanner bring = new Scanner(System.in);
+        
     }
 }
