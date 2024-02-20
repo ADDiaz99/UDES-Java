@@ -22,10 +22,10 @@ public class Ejercicio_07 {
 
         double resultado_victorias = ((cantidad_victorias * valor_partido_ganado) * valor_dolar_en_pesos);
         double resultado_empates = ((cantidad_empates * valor_partido_empatado) * valor_dolar_en_pesos);
+
         
-        String formato = "%.2f";
-        System.out.println("Por tus partidos ganados cobraras " + String.format(formato, resultado_victorias));
-        System.out.println("Por tus partidos empatados cobraras " + String.format(formato, resultado_empates));
+        System.out.println("Por tus partidos ganados cobraras " + String.format("%.2f", resultado_victorias));
+        System.out.println("Por tus partidos empatados cobraras " + String.format("%.2f", resultado_empates));
 
 
         bring.close();
