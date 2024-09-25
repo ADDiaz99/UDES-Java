@@ -45,27 +45,39 @@ public class Modelo {
             }
             try {
             switch (opcion) {
-            case 0: votos[0]++; intentos--;
-            break;
-            case 1: votos[1]++; intentos--;
-            break;
-            case 2: votos[2]++; intentos--;
-            break;
-            }
+                case 0: votos[0]++; intentos--;
+                break;
+                case 1: votos[1]++; intentos--;
+                break;
+                case 2: votos[2]++; intentos--;
+                break;
+                }
             } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(null, "Por favor, ingrese números válidos.");
             } catch (ArithmeticException e) {
             JOptionPane.showMessageDialog(null, "Error: " + e.getMessage());
             }
         } // Fin ciclo while
-        max = 0;
-        for (int i = 0; i < size; i++){
+        
+        if (votos[0] == votos[1]){
+            JOptionPane.showMessageDialog(null, "Las elecciones han terminado en un empate entre " + candidatos[0] + " y " + candidatos[1],"Resultado: Empate", JOptionPane.WARNING_MESSAGE);
+        }
+        else if(votos[0] == votos[2]){
+            JOptionPane.showMessageDialog(null, "Las elecciones han terminado en un empate entre " + candidatos[0] + " y " + candidatos[2],"Resultado: Empate", JOptionPane.WARNING_MESSAGE);
+        }
+        else if(votos[1] == votos[2]){
+            JOptionPane.showMessageDialog(null, "Las elecciones han terminado en un empate entre " + candidatos[1] + " y " + candidatos[2],"Resultado: Empate", JOptionPane.WARNING_MESSAGE);
+            
+        }
+        else{
+            max = 0;
+            for (int i = 0; i < size; i++){
             if(votos[i] > max){
                 max = votos[i];
                 ganador = candidatos[i];
+                }
             }
+            JOptionPane.showMessageDialog(null, "El ganador es: " + ganador + "\n\nCantidad de votos: " + max + "\nDe un total de: " + votantes + " electores.", "Fin de las Elecciones", JOptionPane.PLAIN_MESSAGE);
         }
-        // TODO: Verificar empates, y hacer excepciones en todos los inputs
-        JOptionPane.showMessageDialog(null, "El ganador es: " + ganador + "\n\nCantidad de votos: " + max + "\nDe un total de: " + votantes + " electores.", "Fin de las Elecciones", JOptionPane.PLAIN_MESSAGE);
     }    
 }
